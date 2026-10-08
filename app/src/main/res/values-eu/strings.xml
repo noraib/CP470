@@ -3,4 +3,11 @@
     <string name="app_name">AndroidAssignments</string>
     <string name="hello_message">Kaixo Mundu!</string>
     <string name="ButtonText">I\’m a button</string>
+    <string name="login_title">Sesioa hasi</string>
+    <string name="login_hint">sesio izena</string>
+    <string name="login_password">pasahitza</string>
+    <string name="password_hint">password</string>
+    <string name="switch_text">Zer egiten du honek?</string>
+
+
 </resources>
