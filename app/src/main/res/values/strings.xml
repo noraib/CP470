@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">AndroidAssignments</string>
     <string name="hello_message">Hello World!</string>
+    <string name="return_login_message">Go to Login</string>
+    <string name="return_list_message">Go to List</string>
     <string name="ButtonText">I\’m a button</string>
     <string name="login_title">Login</string>
     <string name="login_hint">login name</string>
