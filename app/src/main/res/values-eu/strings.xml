@@ -13,6 +13,8 @@
     <string name="switch_on">Switcha ON dago</string>
     <string name="switch_off">Switcha OFF dago</string>
     <string name="dialog_title">Ariketa amaitu?</string>
+    <string name="login_email_dialog">Mesedez, sartu helbide electronico apropos bat</string>
+    <string name="login_password_dialog">Mesedez, sartu pasahitz bat</string>
     <string name="dialog_message">Ariketa amaitu nahi duzu?</string>
     <string name="ok">Bai</string>
     <string name="cancel">Atzera egin</string>

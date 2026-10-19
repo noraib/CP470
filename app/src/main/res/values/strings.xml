@@ -12,6 +12,8 @@
     <string name="switch_on">Switch is ON</string>
     <string name="switch_off">Switch is OFF</string>
     <string name="dialog_title">Finish Activity?</string>
+    <string name="login_email_dialog">Please, enter a valid email</string>
+    <string name="login_password_dialog">Please, enter a password</string>
     <string name="dialog_message">Do you want to finish the activity?</string>
     <string name="ok">Yes</string>
     <string name="cancel">Cancel</string>

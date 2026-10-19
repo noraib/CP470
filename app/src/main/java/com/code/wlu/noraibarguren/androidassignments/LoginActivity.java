@@ -50,12 +50,12 @@ public class LoginActivity extends AppCompatActivity {
             String passwordText = passwordEditText.getText().toString().trim();
 
             if (emailText.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(emailText).matches()) {
-                Toast.makeText(LoginActivity.this, "Por favor, ingresa un correo electrónico válido", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, R.string.login_email_dialog, Toast.LENGTH_SHORT).show();
                 return; // Detiene la ejecución para no guardar ni pasar de pantalla
             }
 
             if (passwordText.isEmpty()) {
-                Toast.makeText(LoginActivity.this, "La contraseña no puede estar vacía", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, R.string.login_password_dialog, Toast.LENGTH_SHORT).show();
                 return; // Detiene la ejecución
             }
 
