@@ -3,10 +3,17 @@
     <string name="hello_message">Hello World!</string>
     <string name="return_login_message">Go to Login</string>
     <string name="return_list_message">Go to List</string>
-    <string name="ButtonText">I\’m a button</string>
+    <string name="ButtonText">Start</string>
     <string name="login_title">Login</string>
     <string name="login_hint">login name</string>
     <string name="login_password">password</string>
     <string name="password_hint">password</string>
     <string name="switch_text">What does this do?</string>
+    <string name="switch_on">Switch is ON</string>
+    <string name="switch_off">Switch is OFF</string>
+    <string name="dialog_title">Finish Activity?</string>
+    <string name="dialog_message">Do you want to finish the activity?</string>
+    <string name="ok">Yes</string>
+    <string name="cancel">Cancel</string>
+
 </resources>
