@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -45,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
         btnGoToList.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, ListItemsActivity.class);
             startActivityForResult(intent, 10);
+        });
+
+        // abrir chat al hacer click
+        Button startChatButton = findViewById(R.id.startChatButton);
+        startChatButton.setOnClickListener(v -> {
+            Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+            Intent intent = new Intent(MainActivity.this, ChatWindow.class);
+            startActivity(intent);
         });
     }
 
