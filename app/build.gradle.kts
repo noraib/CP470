@@ -38,19 +38,16 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    // NUEVO 1: robolectric necesita los recursos (layouts, strings) en los unit tests
     testOptions {
         unitTests {
             isIncludeAndroidResources = true
+            all {
+                it.extensions.configure<JacocoTaskExtension> {
+                    isIncludeNoLocationClasses = true
+                    excludes = listOf("jdk.internal.*")
+                }
+            }
         }
-    }
-}
-
-// NUEVO 2: hace que jacoco registre las clases cargadas por robolectric
-tasks.withType<Test>().configureEach {
-    extensions.findByType(JacocoTaskExtension::class.java)?.apply {
-        isIncludeNoLocationClasses = true
-        excludes = listOf("jdk.internal.*")
     }
 }
 
