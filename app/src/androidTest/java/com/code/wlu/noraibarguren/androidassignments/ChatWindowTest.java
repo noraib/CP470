@@ -1,18 +1,5 @@
 package com.code.wlu.noraibarguren.androidassignments;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.os.Bundle;
-
-import androidx.test.core.app.ActivityScenario;
-import androidx.test.ext.junit.rules.ActivityScenarioRule;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
-
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
 import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.Espresso.pressBack;
@@ -27,6 +14,19 @@ import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.anything;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+
+import androidx.test.core.app.ActivityScenario;
+import androidx.test.ext.junit.rules.ActivityScenarioRule;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 @RunWith(AndroidJUnit4.class)
 public class ChatWindowTest {
@@ -308,5 +308,18 @@ public class ChatWindowTest {
             scenario.recreate();
             onView(withId(R.id.checkBox)).check(matches(isDisplayed()));
         }
+    }
+
+    @Test
+    public void testChatUpButtonReturnsToMain() {
+        // abrir el chat desde MainActivity
+        onView(withId(R.id.startChatButton)).perform(click());
+
+        // pulsar la flecha Up (parentActivityName = MainActivity)
+        onView(withContentDescription(androidx.appcompat.R.string.abc_action_bar_up_description))
+                .perform(click());
+
+        // comprobar que se volvio a MainActivity
+        onView(withId(R.id.startChatButton)).check(matches(isDisplayed()));
     }
 }

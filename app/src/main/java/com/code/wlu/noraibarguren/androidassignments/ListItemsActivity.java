@@ -9,14 +9,13 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
+import android.widget.Switch;
 import android.widget.Toast;
+
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SwitchCompat;
-import android.widget.Switch;
-import android.widget.Toast;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
