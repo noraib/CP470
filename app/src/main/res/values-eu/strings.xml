@@ -18,6 +18,9 @@
     <string name="dialog_message">Ariketa amaitu nahi duzu?</string>
     <string name="ok">Bai</string>
     <string name="cancel">Atzera egin</string>
+    <string name="start_chat">Hasi konbertsazioa!</string>
+    <string name="type_message">Idatzi zure mezua hemen...</string>
+    <string name="send">Mezua bidali</string>
 
 
 </resources>
