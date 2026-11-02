@@ -68,10 +68,14 @@ public class ListItemsActivity extends AppCompatActivity {
             int duration;
 
             if (isChecked) {
-                print(getString(R.string.switch_on));
+                text = getString(R.string.switch_on);
+                duration = Toast.LENGTH_SHORT;
             } else {
-                print(getString(R.string.switch_off));
+                text = getString(R.string.switch_off);
+                duration = Toast.LENGTH_LONG;
             }
+
+            Toast.makeText(ListItemsActivity.this, text, duration).show();
         });
 
 

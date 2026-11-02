@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i(ACTIVITY_NAME, "onCreate() called");
         setContentView(R.layout.activity_main);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
+        Log.i(ACTIVITY_NAME, "Returned to MainActivity.onActivityResult");
         // Verificar si el requestCode es 10 y si el resultCode es Activity.RESULT_OK
         if (requestCode == 10 && resultCode == Activity.RESULT_OK) {
 
