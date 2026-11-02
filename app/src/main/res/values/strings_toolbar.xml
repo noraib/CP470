@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="test_toolbar">Test Toolbar</string>
+    <string name="toolbar_choice_1">Choice 1</string>
+    <string name="toolbar_choice_2">Choice 2</string>
+    <string name="toolbar_choice_3">Choice 3</string>
+    <string name="toolbar_about">About</string>
+    <string name="about_message">Version 1.0, by NORA IBARGUREN</string>
+    <string name="snackbar_item_one">You selected item 1</string>
+    <string name="fab_message">Hello from the floating button!</string>
+    <string name="fab_description">Show message</string>
+    <string name="dialog_back_title">Do you want to go back?</string>
+    <string name="dialog_back_yes">Yes</string>
+    <string name="dialog_back_no">No</string>
+    <string name="dialog_new_message_title">Set a new message</string>
+    <string name="dialog_new_message_hint">New Message</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_image_description">Dialog icon</string>
+</resources>

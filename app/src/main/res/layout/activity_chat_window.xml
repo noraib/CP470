@@ -24,6 +24,11 @@
 
     <Button
         android:id="@+id/sendButton"
+        style="@style/AppButton"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textSize="14sp"
+        android:layout_marginEnd="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

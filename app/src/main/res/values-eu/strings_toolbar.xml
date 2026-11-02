@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="test_toolbar">Tresna-barra proba</string>
+    <string name="toolbar_choice_1">1. aukera</string>
+    <string name="toolbar_choice_2">2. aukera</string>
+    <string name="toolbar_choice_3">3. aukera</string>
+    <string name="toolbar_about">Honi buruz</string>
+    <string name="about_message">1.0 bertsioa, NORA IBARGUREN-ek egina</string>
+    <string name="snackbar_item_one">1. elementua hautatu duzu</string>
+    <string name="fab_message">Kaixo botoi flotatzailetik!</string>
+    <string name="fab_description">Mezua erakutsi</string>
+    <string name="dialog_back_title">Atzera joan nahi duzu?</string>
+    <string name="dialog_back_yes">Bai</string>
+    <string name="dialog_back_no">Ez</string>
+    <string name="dialog_new_message_title">Mezu berria ezarri</string>
+    <string name="dialog_new_message_hint">Mezu berria</string>
+    <string name="dialog_ok">Ados</string>
+    <string name="dialog_cancel">Utzi</string>
+    <string name="dialog_image_description">Elkarrizketa-koadroaren ikonoa</string>
+</resources>
