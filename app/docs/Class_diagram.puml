@@ -1,0 +1,94 @@
+@startuml
+skinparam classAttributeIconSize 0
+title CP470 - Android Assignments: Complete Class Diagram
+
+package com.code.wlu.noraibarguren.androidassignments {
+
+    class MainActivity {
+        # {static} ACTIVITY_NAME : String
+        # onCreate(savedInstanceState : Bundle) : void
+        # onStart() : void
+        # onResume() : void
+        # onPause() : void
+        # onStop() : void
+        # onDestroy() : void
+        + onSaveInstanceState(outState : Bundle) : void
+        + onRestoreInstanceState(savedInstanceState : Bundle) : void
+        # onActivityResult(requestCode : int, resultCode : int, data : Intent) : void
+    }
+
+    class LoginActivity {
+        # {static} ACTIVITY_NAME : String
+        # onCreate(savedInstanceState : Bundle) : void
+        + onOptionsItemSelected(item : MenuItem) : boolean
+        # onStart() : void
+        # onResume() : void
+        # onPause() : void
+        # onStop() : void
+        # onDestroy() : void
+        + onSaveInstanceState(outState : Bundle) : void
+        + onRestoreInstanceState(savedInstanceState : Bundle) : void
+    }
+
+    class ListItemsActivity {
+        # {static} ACTIVITY_NAME : String
+        - {static} REQUEST_IMAGE_CAPTURE : int
+        # onCreate(savedInstanceState : Bundle) : void
+        # onActivityResult(requestCode : int, resultCode : int, data : Intent) : void
+        + onOptionsItemSelected(item : MenuItem) : boolean
+        + print(message : String) : void
+        # onStart() : void
+        # onResume() : void
+        # onPause() : void
+        # onStop() : void
+        # onDestroy() : void
+        + onSaveInstanceState(outState : Bundle) : void
+        + onRestoreInstanceState(savedInstanceState : Bundle) : void
+    }
+
+    class ChatWindow {
+        - listView : ListView
+        - chatEditText : EditText
+        - sendButton : Button
+        - messageList : ArrayList<String>
+        - messageAdapter : ChatAdapter
+        # onCreate(savedInstanceState : Bundle) : void
+    }
+
+    class "ChatWindow.ChatAdapter" as ChatAdapter {
+        + ChatAdapter(ctx : Context)
+        + getCount() : int
+        + getItem(position : int) : String
+        + getView(position : int, convertView : View, parent : ViewGroup) : View
+    }
+
+    class TestToolbar {
+        # {static} ACTIVITY_NAME : String
+        - snackbarMessage : String
+        # onCreate(savedInstanceState : Bundle) : void
+        + onCreateOptionsMenu(m : Menu) : boolean
+        + onOptionsItemSelected(mi : MenuItem) : boolean
+        - showGoBackDialog() : void
+        - showCustomDialog() : void
+    }
+
+    ' Inheritance
+    MainActivity --|> androidx.appcompat.app.AppCompatActivity
+    LoginActivity --|> androidx.appcompat.app.AppCompatActivity
+    ListItemsActivity --|> androidx.appcompat.app.AppCompatActivity
+    ChatWindow --|> androidx.appcompat.app.AppCompatActivity
+    TestToolbar --|> androidx.appcompat.app.AppCompatActivity
+    ChatAdapter --|> android.widget.ArrayAdapter
+
+    ' Composition
+    ChatWindow *-- ChatAdapter : messageAdapter
+
+    ' Intent Dependencies
+    MainActivity ..> LoginActivity : startActivity
+    LoginActivity ..> MainActivity : startActivity
+    MainActivity ..> ListItemsActivity : startActivityForResult
+    ListItemsActivity ..> MainActivity : setResult
+    MainActivity ..> ChatWindow : startActivity
+    MainActivity ..> TestToolbar : startActivity
+}
+@enduml
